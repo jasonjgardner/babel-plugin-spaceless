@@ -4,13 +4,13 @@
 
 A Babel plugin which strips excess whitespace from template strings at compilation time.
 
-🛰<
-
 ## Usage
 
 Check out this plugin in action [on AST Explorer](https://astexplorer.net/#/gist/352bbab2cb8c6ea514326f163fb59139/latest)
 
 ```javascript
+/* global spaceless:false */
+
 spaceless`
   <body>
       <main>
@@ -34,13 +34,21 @@ spaceless`
 <body><main><nav><ul><li>Keep    this      whitespace      !</li></ul></nav><p>Howdy!<br>How&rsquo;s it going?</p></main></body>
 ```
 
+### ESLint
+
+Since you won't be using this module with `import`, you'll have to let ESLint know `spaceless` is an existing function.
+List it in a `/* global */` comment, like in the [example above](Usage), or within your ESLint configuration file.
+[See ESLint docs](https://eslint.org/docs/user-guide/configuring#specifying-globals) for more details on specifying
+globals.
+
 ## Attribution
 
 The source code is largely based on this article from WebEngage: [*Transforming our JavaScript code at build-time with Babel*](https://engineering.webengage.com/2016/07/15/babel/)
 
 ## Alternatives
 
-There's more than one way to skin a template literal. You might also be interested in these well-tested and more popular packages:
+There's more than one way to skin a template literal. You might also be interested in these well-tested and more popular
+packages:
 
 - [babel-plugin-dedent](https://github.com/MartinKolarik/babel-plugin-dedent)
 - `oneLine` from [common-tags](https://github.com/declandewet/common-tags#oneline)
