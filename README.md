@@ -38,7 +38,7 @@ spaceless`
 ### ESLint
 
 Since you won't be using this module with `import`, you'll have to let ESLint know `spaceless` is an existing function.
-List it in a `/* global */` comment, like in the [example above](#Usage), or within your ESLint configuration file.
+List it in a `/* global */` comment, like in the [example above](#usage), or within your ESLint configuration file.
 [See ESLint docs](https://eslint.org/docs/user-guide/configuring#specifying-globals) for more details on specifying
 globals.
 
