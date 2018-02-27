@@ -1,20 +1,30 @@
 {
   "name": "babel-plugin-spaceless",
   "version": "0.1.2",
-  "author": "Jason Gardner",
+  "author": {
+    "name": "Jason Gardner",
+    "email": "holler@jasongardner.co",
+    "url": "http://jasongardner.co"
+  },
   "description": "Strips excess whitespace from template literals at build time",
+  "homepage": "https://github.com/jasonjgardner/babel-plugin-spaceless",
   "license": "MIT",
   "keywords": [
     "babel",
     "babel-plugin",
-    "whitespace",
-    "strip"
+    "es6",
+    "template literals",
+    "whitespace"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonjgardner/babel-plugin-spaceless.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jasonjgardner/babel-plugin-spaceless/issues/"
+  },
   "main": "src/index.js",
   "files": [
     "src"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  ]
 }
