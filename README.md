@@ -1,4 +1,4 @@
-# spaceless
+# babel-plugin-spaceless
 
 ![Babel Plugin](https://s3-us-west-2.amazonaws.com/jgardner/babel-plugin-spaceless/babel-plugin-badge.png "This package is a Babel plugin!")
 
