@@ -1,0 +1,17 @@
+{
+  "name": "babel-plugin-spaceless",
+  "version": "0.1.0",
+  "description": "Strips excess whitespace from template literals at build time",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "whitespace",
+    "strip"
+  ],
+  "author": "Jason Gardner",
+  "license": "MIT"
+}
