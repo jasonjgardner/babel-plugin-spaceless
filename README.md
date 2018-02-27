@@ -2,7 +2,8 @@
 
 ![Babel Plugin](https://s3-us-west-2.amazonaws.com/jgardner/babel-plugin-spaceless/babel-plugin-badge.png "This package is a Babel plugin!")
 
-A Babel plugin which strips excess whitespace from template strings at compilation time.
+A Babel plugin which strips excess whitespace from template literals at
+compilation time.
 
 ## Usage
 
@@ -37,7 +38,7 @@ spaceless`
 ### ESLint
 
 Since you won't be using this module with `import`, you'll have to let ESLint know `spaceless` is an existing function.
-List it in a `/* global */` comment, like in the [example above](Usage), or within your ESLint configuration file.
+List it in a `/* global */` comment, like in the [example above](#Usage), or within your ESLint configuration file.
 [See ESLint docs](https://eslint.org/docs/user-guide/configuring#specifying-globals) for more details on specifying
 globals.
 
