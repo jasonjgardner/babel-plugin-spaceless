@@ -1,14 +1,14 @@
 # spaceless
 
-![Babel Plugin](https://s3-us-west-2.amazonaws.com/jgardner/babel-plugin-spaceless/babel-plugin-badge.min.svg "This package is a Babel plugin!")
+![Babel Plugin](https://s3-us-west-2.amazonaws.com/jgardner/babel-plugin-spaceless/babel-plugin-badge.png "This package is a Babel plugin!")
 
 A Babel plugin which strips excess whitespace from template strings at compilation time.
 
---🛰
+🛰<
 
 ## Usage
 
-Check out this plugin in-action [on AST Explorer](https://astexplorer.net/#/gist/352bbab2cb8c6ea514326f163fb59139/latest)
+Check out this plugin in action [on AST Explorer](https://astexplorer.net/#/gist/352bbab2cb8c6ea514326f163fb59139/latest)
 
 ```javascript
 spaceless`
