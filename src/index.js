@@ -51,7 +51,7 @@ function getReplacements(options) {
 
 	/// Replace whitespace before tags - Enabled by default
 	if (isEnabled('remove-before-tags', true)) {
-		replacements.set(/[\n\r\t ]+</g, ' <');
+		replacements.set(/[\n\r\t ]+</g, '<');
 	}
 
 	/// Replace whitespace between closing tags - Enabled by default
@@ -64,14 +64,18 @@ function getReplacements(options) {
 		replacements.set(/[\n\r\t ]+<\//ig, '</');
 	}
 
-	/// Replace whitespace after closing tags - Disabled by default
-	if (isEnabled('remove-after-close', false)) {
-		replacements.set(/<\/([a-z0-9-]*[a-z0-9]+)>[\n\r\t ]+/ig, '</$1>');
+	/// Replace whitespace after closing tags - Enabled by default
+	/// (Excludes inline HTML tags)
+	if (isEnabled('remove-after-close', true)) {
+		replacements.set(
+			/<\/(?!a|b|i|u|s|q|em|rt|rp|strong|small|abbr|cite|dfn|sub|sup|time|code|kbd|samp|var|mark|bdi|bdo|ruby|span)([a-z0-9-]*[a-z0-9'"]+)>[\r\n\t ]+/ig,
+			'</$1>'
+		);
 	}
 
 	/// Replace whitespace after opening tag - Disabled by default
 	if (isEnabled('remove-after-open', false)) {
-		replacements.set(/([a-z]+)>[\n\r\t ]+/g, '$1>');
+		replacements.set(/<([a-z0-9-]*[a-z0-9'"]+)>[\n\r\t ]+/g, '<$1>');
 	}
 
 	/// Replace excess whitespace anywhere in contents - Disabled by default
