@@ -24,7 +24,7 @@ function transform(replacements, quasis) {
 	}
 }
 
-module.exports = ({ types: t }) => {
+module.exports = ({types: t}) => {
 	return {
 		visitor: {
 			TaggedTemplateExpression: path => {
@@ -35,9 +35,9 @@ module.exports = ({ types: t }) => {
 				 */
 				const replacements = new Map();
 
-				if (t.isIdentifier(path.node.tag, { name: 'spaceless' })) {
-					replacements.set(/[\n\r\t ]/g, ' ');
-				} else if (t.isIdentifier(path.node.tag, { name: 'inline' })) {
+				if (t.isIdentifier(path.node.tag, {name: 'spaceless'})) {
+					replacements.set(/[\n\r\t ]+/g, ' ');
+				} else if (t.isIdentifier(path.node.tag, {name: 'inline'})) {
 					/**
 					 * This regex was stolen from common-tags. Hooray for open-source!
 					 * {@link https://github.com/declandewet/common-tags/blob/master/src/oneLine/oneLine.js#L6}
